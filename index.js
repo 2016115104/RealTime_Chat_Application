@@ -11,6 +11,15 @@ const server = app.listen(port, () => {
 const io = socketio(server)
 io.on('connection',socket => {
   console.log("connected")
+  socket.emit('msg','Welcome!')
+  socket.broadcast.emit('msg','User joined the chat');
+  socket.on('disconnect',()=>{
+    io.emit('msg','User left the chat')
+  })
+  socket.on('chat-msg',sentMsg =>{
+    console.log(sentMsg)
+  })
+
 })
 
 
