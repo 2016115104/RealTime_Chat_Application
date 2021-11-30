@@ -218,3 +218,20 @@ i
   width: 40px;
   height: 7px; 
 }
+.chat-messages .messages {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: var(--light-color);
+	border-radius: 5px;
+	overflow-wrap: break-word;
+}
+.chat-messages .messages .time{
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+.chat-messages .message .time span {
+	color: #777;
+}
